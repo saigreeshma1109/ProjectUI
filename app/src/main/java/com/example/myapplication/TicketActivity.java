@@ -26,7 +26,7 @@ public class TicketActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ticket);
 
         MyTicketAdapter adapter = new MyTicketAdapter(this,tName,price,imgId,time,seats,date);
-        listView = findViewById(R.id.list);
+        listView = findViewById(R.id.ticket_list);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener((parent, view, position, id) -> {
             Intent intent = new Intent(getApplicationContext(),DynamicActivity.class);
